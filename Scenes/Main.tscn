@@ -1,0 +1,96 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_left = 0.09
+anchor_top = 0.7
+anchor_right = 0.9
+anchor_bottom = 0.9
+margin_left = -0.400002
+columns = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IPBox" type="LineEdit" parent="."]
+margin_right = 120.0
+margin_bottom = 24.0
+placeholder_text = "IP Address"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayersBox" type="LineEdit" parent="."]
+margin_left = 0.735077
+margin_top = 26.4633
+margin_right = 120.735
+margin_bottom = 50.4633
+placeholder_text = "No. Players"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PortBox" type="LineEdit" parent="."]
+margin_left = 123.0
+margin_top = 1.0
+margin_right = 181.0
+margin_bottom = 25.0
+placeholder_text = "Port"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PortBox2" type="LineEdit" parent="."]
+margin_left = 124.47
+margin_top = 25.9931
+margin_right = 182.47
+margin_bottom = 49.9931
+placeholder_text = "Port"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JoinButton" type="Button" parent="."]
+margin_left = 187.647
+margin_top = 3.20285
+margin_right = 222.647
+margin_bottom = 23.2029
+text = "Join"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HostButton" type="Button" parent="."]
+margin_left = 185.441
+margin_top = 28.196
+margin_right = 227.441
+margin_bottom = 48.196
+text = "Host"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Discard" type="Control" parent="."]
+margin_left = 482.871
+margin_top = 192.449
+margin_right = 522.871
+margin_bottom = 232.449
+
+[node name="DrawButton" type="Button" parent="."]
+margin_left = 328.721
+margin_top = 268.512
+margin_right = 372.721
+margin_bottom = 288.512
+text = "Draw"
+[connection signal="pressed" from="JoinButton" to="." method="_on_JoinButton_pressed"]
+[connection signal="pressed" from="HostButton" to="." method="_on_HostButton_pressed"]
+[connection signal="pressed" from="DrawButton" to="." method="_on_DrawButton_pressed"]
